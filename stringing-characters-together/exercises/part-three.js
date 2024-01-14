@@ -20,3 +20,12 @@ console.log(`The abbreviation of ${language} is '${initials}'.`);
 //1. Use the string methods you know to print 'Title Case' from the string 'title case'.
 
 let notTitleCase = 'title case';
+let newTitle = notTitleCase.replace(notTitleCase[0], notTitleCase.slice(0, 1).toUpperCase());
+//newTitle = newTitle.replace[newTitle.indexOf(" ") + 1, (newTitle.toUpperCase(newTitle.indexOf(" ") + 1))];
+// console.log(newTitle.indexOf(" ") + 1);
+// console.log(newTitle.slice(newTitle.indexOf(" ") + 1, newTitle.indexOf(" ") + 2));
+// console.log(newTitle.slice(newTitle.indexOf(" ") + 1, newTitle.indexOf(" ") + 2).toUpperCase());
+newTitle = newTitle.replace(newTitle.slice(newTitle.indexOf(" ") + 1, newTitle.indexOf(" ") + 2), newTitle.slice(newTitle.indexOf(" ") + 1, newTitle.indexOf(" ") + 2).toUpperCase());
+console.log(newTitle);
+//OR
+console.log(`${notTitleCase.replace("t", "T").replace("c", "C")}`);
