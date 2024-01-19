@@ -8,10 +8,12 @@ strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
-	let check;
-	let output;
+	let check ;
+	let output ;
 	//TODO: 2. write the code required for this step
-
+	if (strings[0].includes(",")){
+		output = strings[0].split(",").reverse().join(", ");
+	}
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
 }
@@ -21,7 +23,9 @@ function semiDash() {
 	let check;
 	let output;
 //TODO: write the code required for this step
-
+if (strings[1].includes(";")){
+	output = strings[1].split(";").sort().join("-");
+}
   
 	return output;
 }
@@ -31,7 +35,9 @@ function reverseSpaces() {
 	let check;
 	let output;
   //TODO: write the code required for this step
-
+  if (strings[2].includes(" ")){
+	output = strings[2].split(" ").sort().reverse().join(" ");
+  }
 	return output;
 }
 
@@ -40,7 +46,10 @@ function commaSpace() {
 	let check;
 	let output;
 	//TODO: write the code required for this step
-  
+	if (strings[3].includes(", ")){
+		console.log(strings[3]);
+		output = strings[3].split(", ").reverse().join(", ");
+	}
 	return output;
 }
 
