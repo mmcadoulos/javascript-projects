@@ -6,6 +6,7 @@ let altitudeKm;
 let orbit = false;
 const input = require('readline-sync');
 
+
 /*Exercise #4: Construct while loops to do the following:
   a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. */
 while (!orbit){
@@ -13,14 +14,17 @@ while (!orbit){
 
   fuelLevel = input.question("Please enter the amount of fuel: ");
 
-    while (fuelLevel <= 5000 || fuelLevel >= 30000){
-      if (fuelLevel<=5000){
+    while (fuelLevel <= 5000 || fuelLevel >= 30000 || isNaN(fuelLevel)){
+      if (isNaN(fuelLevel)){
+        console.log(`<${fuelLevel}> IS NOT A VALID NUMBER`)
+      } else if (fuelLevel <= 5000){
         console.log(`Sorry, the fuel level must exceed 5000.\nCurrent fuel level: ${fuelLevel}`);
-    } else {
-      console.log(`Sorry, the fuel level must not reach 30,000.\nCurrent fuel level: ${fuelLevel}`);
-    }
-    fuelLevel = input.question("Please try again: ");
-    }
+      } else if (fuelLevel >= 30000){
+        console.log(`Sorry, the fuel level must not reach 30,000.\nCurrent fuel level: ${fuelLevel}`);
+      }
+      fuelLevel = input.question("Please try again: ");
+  }
+  // console.log(fuelLevel);
 
   console.log(`Fuel level: ${fuelLevel}\nContinuing startup sequence...`);
   // console.log(typeof(fuelLevel));
@@ -31,11 +35,13 @@ while (!orbit){
     
   crewNumber = input.question("Please enter the number of astronauts aboard: ");
 
-    while (crewNumber < 1 || crewNumber > 7){
+    while (crewNumber < 1 || crewNumber > 7 || isNaN(crewNumber)){
       if (crewNumber < 1){
         console.log(`*static*\nArrgh this ain't gonna be a ghost ship today!\n*static*`);
-      } else {
+      } else if (crewNumber > 7){
         console.log(`*static*\nMake some walk the plank! We don't need more than seven!\n*static*`);
+      } else if (isNaN(crewNumber)){
+        console.log(`<${crewNumber}> IS NOT A VALID NUMBER`)
       }
       crewNumber = input.question("How many are on board now? ");
     }
