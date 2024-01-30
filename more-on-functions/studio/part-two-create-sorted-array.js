@@ -25,11 +25,13 @@ function findMinValue (array){
 
 function sortArray(array, findMin){
   let sortedArray = [];
-  let minimumValue;
+  // let minimumValue;
   while (array.length !== 0){
-    minimumValue = findMin(array);
-    sortedArray.push(minimumValue);
-    array.splice(array.indexOf(minimumValue), 1);
+    // minimumValue = findMin(array);
+    // sortedArray.push(minimumValue);
+    // array.splice(array.indexOf(minimumValue), 1);
+    sortedArray.push(findMin(array));
+    array.splice(array.indexOf(findMin(array)), 1);
   }
 
 
