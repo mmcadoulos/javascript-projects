@@ -20,10 +20,10 @@ let tortoiseOne = {
 };
 
 // Using a for..in loop, iterate through each property in the tortoiseOne object and print the value to the console.
-//  for (banana in tortoiseOne){
-//    console.log(banana + ": " + tortoiseOne[banana]);
-//  }
+ for (banana in tortoiseOne){
+   console.log(banana + ": " + tortoiseOne[banana]);
+ }
 
-console.log(Math.round(-3.87));
+//console.log(Math.round(-3.87));
 
 
