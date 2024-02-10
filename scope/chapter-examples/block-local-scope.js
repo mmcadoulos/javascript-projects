@@ -1,6 +1,7 @@
 function myFunction() {
-    let i = 10;
+   i = 10;
     return 10 + i;
 }
-
+//let i = myFunction();
+myFunction();
 console.log(i);
