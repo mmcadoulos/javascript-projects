@@ -1,0 +1,17 @@
+{
+  "name": "throw-default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "throw-default-error.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
