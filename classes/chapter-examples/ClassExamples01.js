@@ -19,3 +19,10 @@ console.log(fox);
 console.log(fox.age, fox.color);
 
 //Try modifying or adding properties below.
+let banana = new Astronaut("mushy", 'couple of weeks');
+console.log(banana);
+banana.color = 'rancid brown';
+console.log(banana);
+
+let hedgehog = new Astronaut("Chip", 3, 3, 'brown');
+console.log(hedgehog);
