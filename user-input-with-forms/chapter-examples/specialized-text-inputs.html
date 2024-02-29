@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form POST</title>
+    <style>
+      label {
+        display: block;
+        padding-bottom: 10px;
+      }
+      body {
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form
+      action="https://handlers.education.launchcode.org/request-parrot"
+      method="post"
+    >
+      <label>Code Name<input type="text" name="codeName" /></label>
+      <label>Code Word<input type="password" name="codeWord" /></label>
+
+      <label
+        >Mission Description<br />
+        <textarea name="description" rows="5" cols="75"></textarea>
+      </label>
+
+      <button>Send Report</button>
+    </form> -->
+    <form action="https://handlers.education.launchcode.org/request-parrot" method="post">
+        <label>Email<input type="email" name="emailAddress"/></label>
+        <label>Report Date<input type="date" name="reportDate"/></label>
+        <label>Crew Count<input type="number"
+        name="crewCount" min="1" max="10"/></label>
+        <button>Send Report</button>
+    </form>
+</body>
+</html>
