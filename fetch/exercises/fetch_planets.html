@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Planets</title>
+   <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      window.addEventListener("load", function () {
+        // TODO: fetch planets JSON
+        fetch(
+          "https://handlers.education.launchcode.org/static/planets.json"
+        ).then((response) => {
+          // console.log(response);
+          response.json().then((json) => {
+            // console.log(json);
+            const destination = document.getElementById("destination");
+            // for(planet in json){
+            // destination.innerHTML += `<h3>Planet ${json[planet].name}</h3>`;
+            // }
+            // destination.innerHTML += `<h3>Planet ${json[0].name}</h3>`;
+
+            // // // Before trying the Modulus I did the following:
+            // let index = 0;
+            // destination.addEventListener("click", () => {
+            //   if (index < json.length) {
+            //     destination.innerHTML = `
+            //     <div>
+            //       <h3 class="planet">Planet ${json[index].name}</h3>
+            //       <img src=${json[index].image} height=250 class="planet"></img>
+            //     </div>
+            //   `;
+            //     index++;
+            //   } else {
+            //     index = 0;
+            //     destination.innerHTML = `
+            //     <div id="planet">
+            //       <h3 class="planet">Planet ${json[index].name}</h3>
+            //       <img src=${json[index].image} height=250 class="planet"></img>
+            //     </div>
+            //   `;
+            //   index++;
+            //   }
+              // console.log(index);
+              // console.log(json.length);
+            
+              let index = 0;
+      destination.addEventListener("click", function(){
+         destination.innerHTML = `
+            <div>
+               <h3 class="planet">Planet ${json[index].name}</h3>
+               <img src=${json[index].image} height=250 class="planet"></img>
+            </div>
+         `;
+         index = (index + 1) % json.length;
+         console.log(index);
+            });            
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Destination</h1>
+    <div id="destination">
+      <h3 style="user-select: none; cursor: pointer">Planet</h3>
+    </div>
+  </body>
+</html>
